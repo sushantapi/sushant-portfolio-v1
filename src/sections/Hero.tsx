@@ -4,19 +4,35 @@ export function Hero() {
   return (
     <section id="top" className="section-shell grid min-h-[calc(100vh-4rem)] items-center gap-12 py-16 lg:grid-cols-[1.2fr_.8fr] lg:py-20">
       <div>
-        <span className="eyebrow">Backend engineering • Java ecosystem</span>
-        <h1 className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.035em] text-zinc-50 sm:text-5xl lg:text-6xl lg:leading-[1.08]">
-          Java Backend Developer building reliable and scalable backend systems.
+        <p className="text-sm font-semibold tracking-wide text-green-300">{siteConfig.name}</p>
+        <h1 className="mt-3 max-w-4xl text-4xl font-semibold tracking-[-0.035em] text-zinc-50 sm:text-5xl lg:text-6xl lg:leading-[1.08]">
+          {siteConfig.title}
         </h1>
-        <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-400 sm:text-lg">
+        <p className="mt-5 max-w-3xl text-xl font-medium leading-8 text-zinc-200 sm:text-2xl sm:leading-9">
+          I build secure REST APIs, scalable microservices, and reliable backend systems with Java &amp; Spring Boot.
+        </p>
+        <p className="mt-5 max-w-2xl text-base leading-8 text-zinc-400 sm:text-lg">
           I specialize in Java, Spring Boot, Microservices, REST APIs, Security, Kafka, PostgreSQL, and Docker. I enjoy solving complex backend problems and building clean, maintainable systems.
         </p>
-        <p className="mt-5 text-sm font-medium text-zinc-300">4+ Years Experience • Java • Spring Boot • Microservices</p>
+
+        <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm font-medium text-zinc-300" aria-label="Experience and core technologies">
+          <span>4+ Years Experience</span>
+          <span className="text-zinc-700" aria-hidden="true">·</span>
+          <span>Spring Boot</span>
+          <span className="text-zinc-700" aria-hidden="true">·</span>
+          <span>Microservices</span>
+          <span className="text-zinc-700" aria-hidden="true">·</span>
+          <span>Security</span>
+          <span className="text-zinc-700" aria-hidden="true">·</span>
+          <span>PostgreSQL</span>
+        </div>
 
         <div className="mt-8 flex flex-wrap gap-3">
           <a href="#projects" className="rounded-lg bg-green-400 px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-green-300">View My Work</a>
-          <a href="#contact" className="rounded-lg border border-white/12 bg-white/4 px-5 py-3 text-sm font-semibold text-zinc-100 transition hover:bg-white/8">Contact Me</a>
-          <a href={siteConfig.resumeUrl} className="px-2 py-3 text-sm font-medium text-zinc-400 underline decoration-zinc-700 underline-offset-4 hover:text-zinc-100">Download Resume</a>
+          <a href="#contact" className="rounded-lg border border-white/12 bg-white/4 px-5 py-3 text-sm font-semibold text-zinc-100 transition hover:bg-white/8">Let's Talk</a>
+          {siteConfig.resumeAvailable && (
+            <a href={siteConfig.resumeUrl} className="px-2 py-3 text-sm font-medium text-zinc-400 underline decoration-zinc-700 underline-offset-4 hover:text-zinc-100">Download Resume</a>
+          )}
         </div>
       </div>
 

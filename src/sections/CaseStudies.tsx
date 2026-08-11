@@ -15,11 +15,11 @@ export function CaseStudies() {
             <article key={item.id} className="card flex flex-col p-5 sm:p-6">
               <div className="text-xs font-bold uppercase tracking-[0.16em] text-zinc-500">0{index + 1}</div>
               <h3 className="mt-3 text-xl font-semibold tracking-tight text-zinc-50">{item.name}</h3>
-              <p className="mt-3 text-sm leading-6 text-zinc-400">{item.description}</p>
+              <p className="mt-3 text-sm leading-6 text-zinc-400">{item.cardDescription}</p>
 
               <div className="mt-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.13em] text-zinc-500">My contribution</p>
-                <p className="mt-2 text-sm leading-6 text-zinc-300">{item.contribution}</p>
+                <p className="mt-2 text-sm leading-6 text-zinc-300">{item.cardContribution}</p>
               </div>
 
               <div className="mt-5 flex flex-wrap gap-2">

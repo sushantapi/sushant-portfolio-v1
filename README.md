@@ -20,20 +20,29 @@ npm install
 npm run dev
 ```
 
-Production check:
+Production checks:
 
 ```bash
-npm run build
 npm run lint
+npm run build
 ```
 
-## Before launch
+## Launch configuration
 
-1. Edit `src/data/site.ts` and add your real email, LinkedIn URL, and GitHub URL.
-2. Add your real resume as `public/Sushant-Kumar-Resume.pdf`.
-3. Replace the placeholder `og:url` in `index.html` with your deployed domain.
-4. Review each case study for confidentiality before publishing.
-5. Run build/lint and test desktop + mobile.
+Configured in `src/data/site.ts`:
+
+- Email: `sushant843120@gmail.com`
+- LinkedIn: `https://www.linkedin.com/in/sushant-kumar-05a5342b4/`
+- GitHub: `https://github.com/sushantapi`
+- Production domain: `https://sushantkumar.co.in`
+
+## Remaining before launch
+
+1. Add the final resume PDF as `public/Sushant-Kumar-Resume.pdf`.
+2. Set `resumeAvailable: true` in `src/data/site.ts` after the PDF is present.
+3. Re-check the three case studies for confidentiality before publishing.
+4. Run lint/build and test desktop + mobile.
+5. Deploy and connect `sushantkumar.co.in`.
 
 ## V1 scope intentionally excluded
 

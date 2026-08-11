@@ -1,10 +1,12 @@
 export const siteConfig = {
   name: 'Sushant Kumar',
   title: 'Java Backend Developer',
-  email: 'YOUR_EMAIL_HERE',
-  linkedin: 'YOUR_LINKEDIN_URL_HERE',
-  github: 'YOUR_GITHUB_URL_HERE',
+  email: 'sushant843120@gmail.com',
+  linkedin: 'https://www.linkedin.com/in/sushant-kumar-05a5342b4/',
+  github: 'https://github.com/sushantapi',
+  siteUrl: 'https://sushantkumar.co.in',
   resumeUrl: '/Sushant-Kumar-Resume.pdf',
+  resumeAvailable: false,
 }
 
 export const navItems = [
