@@ -4,7 +4,7 @@ export const siteConfig = {
   email: 'sushant843120@gmail.com',
   linkedin: 'https://www.linkedin.com/in/sushant-kumar-05a5342b4/',
   github: 'https://github.com/sushantapi',
-  siteUrl: 'https://sushantkumar.co.in',
+  siteUrl: 'https://www.sushantkumar.co.in',
   resumeUrl: '/Sushant-Kumar-Resume.pdf',
   resumeAvailable: false,
 }
