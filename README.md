@@ -1,19 +1,42 @@
-# Sushant Kumar Portfolio — V1
+# Sushant Kumar — Java Backend Developer Portfolio
 
-A focused single-page portfolio for a 3-day launch.
+Professional portfolio for **Sushant Kumar**, a Java Backend Developer with **4.5 years of experience** building and supporting enterprise backend applications.
 
-## Stack
+**Live portfolio:** https://www.sushantkumar.co.in/
+
+## Positioning
+
+- Java Backend Developer
+- Targeting Senior Java Backend roles
+- Core focus: Java, Spring Boot, REST APIs, Microservices, Spring Security, JPA/Hibernate
+- Professional domains: Accessibility SaaS, Health Insurance, and B2B E-commerce
+
+## What the portfolio includes
+
+- Professional experience across KVAS Technologies, GAVS Technologies, and Powersoft Global Solutions
+- Core backend skills and additional hands-on technologies
+- Three selected professional project case studies
+- Backend development services
+- Contact links for job opportunities and backend projects
+
+## Frontend stack
 
 - React
 - TypeScript
 - Vite
 - Tailwind CSS
 
-## Requirements
+## UX and quality
 
-- Node.js 20.19+ or 22.12+
+- Responsive desktop, tablet, and mobile layouts
+- Subtle scroll-reveal and hover interactions
+- Reduced-motion support for accessibility preferences
+- Accessible navigation and skip-to-content support
+- SEO metadata, canonical URL, sitemap, and robots configuration
 
 ## Run locally
+
+Requirements: Node.js 20.19+ or 22.12+
 
 ```bash
 npm install
@@ -27,23 +50,18 @@ npm run lint
 npm run build
 ```
 
-## Launch configuration
+## Deployment
 
-Configured in `src/data/site.ts`:
+The production site is deployed on Vercel and served from the custom domain:
 
-- Email: `sushant843120@gmail.com`
-- LinkedIn: `https://www.linkedin.com/in/sushant-kumar-05a5342b4/`
-- GitHub: `https://github.com/sushantapi`
-- Production domain: `https://sushantkumar.co.in`
+https://www.sushantkumar.co.in/
 
-## Remaining before launch
+## Confidentiality
 
-1. Add the final resume PDF as `public/Sushant-Kumar-Resume.pdf`.
-2. Set `resumeAvailable: true` in `src/data/site.ts` after the PDF is present.
-3. Re-check the three case studies for confidentiality before publishing.
-4. Run lint/build and test desktop + mobile.
-5. Deploy and connect `sushantkumar.co.in`.
+Professional project case studies intentionally exclude private source code, credentials, internal URLs, customer-sensitive information, and proprietary implementation details.
 
-## V1 scope intentionally excluded
+## Connect
 
-No blog, CMS, auth, booking, admin, newsletter, payments, client portal, analytics platform, or backend contact form.
+- Portfolio: https://www.sushantkumar.co.in/
+- LinkedIn: https://www.linkedin.com/in/sushant-kumar-05a5342b4/
+- GitHub: https://github.com/sushantapi
