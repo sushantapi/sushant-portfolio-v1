@@ -1,6 +1,16 @@
+import { Reveal } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
 
-const focus = ['Backend Development', 'REST API Design', 'Microservices', 'Authentication & Authorization', 'Database Design', 'API Integration', 'Backend Debugging', 'System Design']
+const focus = [
+  'Backend Development',
+  'REST API Development',
+  'Microservices',
+  'Authentication & Authorization',
+  'Database Persistence',
+  'Backend Integration',
+  'Automated Testing',
+  'Production Support',
+]
 
 export function About() {
   return (
@@ -8,17 +18,21 @@ export function About() {
       <div className="section-shell">
         <SectionHeading eyebrow="About" title="About Me" />
         <div className="grid gap-10 lg:grid-cols-[1.15fr_.85fr]">
-          <div className="space-y-5 text-base leading-8 text-zinc-400 sm:text-lg">
-            <p>I'm a Java Backend Developer with 4+ years of experience building backend applications, REST APIs, and microservice-based systems.</p>
-            <p>My primary focus is Java and Spring Boot, with hands-on experience in security, authentication, databases, messaging, API integration, and distributed backend systems.</p>
-            <p>I enjoy understanding difficult backend problems, designing practical solutions, and writing clean and maintainable code.</p>
-          </div>
-          <div className="card p-5 sm:p-6">
-            <h3 className="text-sm font-semibold text-zinc-100">What I focus on</h3>
-            <div className="mt-4 grid gap-2 sm:grid-cols-2">
-              {focus.map((item) => <div key={item} className="rounded-lg border border-white/8 bg-white/[0.025] px-3 py-2.5 text-sm text-zinc-300">{item}</div>)}
+          <Reveal>
+            <div className="space-y-5 text-base leading-8 text-zinc-400 sm:text-lg">
+              <p>I'm a Java Backend Engineer with 4.5 years of experience building and supporting backend applications across accessibility SaaS, health insurance, and B2B e-commerce domains.</p>
+              <p>My core experience includes Java, Spring Boot, REST APIs, microservices, Spring Security, JPA/Hibernate, and relational databases. I have worked on backend development, API integrations, authentication and authorization, database persistence, automated testing, production troubleshooting, and application modernization.</p>
+              <p>I'm currently targeting Senior Java Backend Engineering opportunities where I can contribute through hands-on backend development, problem solving, code quality, and reliable application design.</p>
             </div>
-          </div>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="card p-5 sm:p-6">
+              <h3 className="text-sm font-semibold text-zinc-100">What I focus on</h3>
+              <div className="mt-4 grid gap-2 sm:grid-cols-2">
+                {focus.map((item) => <div key={item} className="rounded-lg border border-white/8 bg-white/[0.025] px-3 py-2.5 text-sm text-zinc-300">{item}</div>)}
+              </div>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>
