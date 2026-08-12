@@ -7,13 +7,16 @@ export function CaseStudies() {
   const [selected, setSelected] = useState<CaseStudy | null>(null)
 
   return (
-    <section id="projects" className="section-pad border-t border-white/8">
+    <section id="projects" className="section-pad border-t border-white/8 bg-white/[0.012]">
       <div className="section-shell">
-        <SectionHeading eyebrow="Selected work" title="Featured Case Studies" description="A few backend systems and engineering problems I've worked on." />
+        <SectionHeading eyebrow="Selected work" title="Featured Professional Projects" description="Three resume-backed backend projects that show enterprise development, modernization, security, persistence, testing, and production support." />
         <div className="grid gap-5 lg:grid-cols-3">
           {caseStudies.map((item, index) => (
             <article key={item.id} className="card flex flex-col p-5 sm:p-6">
-              <div className="text-xs font-bold uppercase tracking-[0.16em] text-zinc-500">0{index + 1}</div>
+              <div className="flex items-start justify-between gap-3">
+                <span className="text-xs font-semibold text-green-300">{item.label}</span>
+                <span className="text-xs font-bold tracking-[0.16em] text-zinc-600">0{index + 1}</span>
+              </div>
               <h3 className="mt-3 text-xl font-semibold tracking-tight text-zinc-50">{item.name}</h3>
               <p className="mt-3 text-sm leading-6 text-zinc-400">{item.cardDescription}</p>
 
