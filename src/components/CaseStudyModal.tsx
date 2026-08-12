@@ -14,12 +14,30 @@ export function CaseStudyModal({ caseStudy, onClose }: Props) {
     if (!dialog || !caseStudy) return
 
     if (!dialog.open) dialog.showModal()
+
     const handleClose = () => onClose()
+    const handleCancel = (event: Event) => {
+      event.preventDefault()
+      dialog.classList.add('dialog-closing')
+      window.setTimeout(() => dialog.close(), 160)
+    }
+
     dialog.addEventListener('close', handleClose)
-    return () => dialog.removeEventListener('close', handleClose)
+    dialog.addEventListener('cancel', handleCancel)
+    return () => {
+      dialog.removeEventListener('close', handleClose)
+      dialog.removeEventListener('cancel', handleCancel)
+    }
   }, [caseStudy, onClose])
 
   if (!caseStudy) return null
+
+  const closeWithAnimation = () => {
+    const dialog = ref.current
+    if (!dialog || dialog.classList.contains('dialog-closing')) return
+    dialog.classList.add('dialog-closing')
+    window.setTimeout(() => dialog.close(), 160)
+  }
 
   return (
     <dialog ref={ref} className="m-auto max-h-[88vh] w-[min(760px,calc(100%-2rem))] overflow-y-auto rounded-2xl border border-white/10 bg-zinc-950 p-0 text-zinc-100 shadow-2xl">
@@ -28,7 +46,7 @@ export function CaseStudyModal({ caseStudy, onClose }: Props) {
           <div className="text-xs font-bold uppercase tracking-[0.16em] text-green-300">{caseStudy.label}</div>
           <h3 className="mt-1 text-xl font-semibold">{caseStudy.name}</h3>
         </div>
-        <button type="button" onClick={() => ref.current?.close()} className="rounded-lg border border-white/10 px-3 py-2 text-sm text-zinc-300 hover:bg-white/5 hover:text-white">
+        <button type="button" onClick={closeWithAnimation} className="rounded-lg border border-white/10 px-3 py-2 text-sm text-zinc-300 hover:bg-white/5 hover:text-white">
           Close
         </button>
       </div>
