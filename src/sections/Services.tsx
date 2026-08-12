@@ -10,10 +10,10 @@ export function Services() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <Reveal key={service.title} delay={(index % 3) * 75} className="h-full">
-              <article className="interactive-card card h-full p-5 sm:p-6">
+              <article className="group interactive-card card h-full p-5 sm:p-6">
                 <div className="flex items-start justify-between gap-4">
                   <h3 className="text-lg font-semibold text-zinc-50">{service.title}</h3>
-                  <span className="translate-x-[-4px] text-green-300/0 transition duration-200 group-hover:text-green-300" aria-hidden="true">→</span>
+                  <span className="translate-x-[-4px] text-green-300/0 transition duration-200 group-hover:translate-x-0 group-hover:text-green-300" aria-hidden="true">→</span>
                 </div>
                 <p className="mt-3 text-[0.93rem] leading-7 text-zinc-400">{service.description}</p>
               </article>
