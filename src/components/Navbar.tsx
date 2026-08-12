@@ -15,8 +15,9 @@ export function Navbar() {
   return (
     <header className={`nav-shell sticky top-0 z-50 border-b border-white/8 bg-zinc-950/88 backdrop-blur ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="section-shell flex h-16 items-center justify-between">
-        <a href="#top" className="text-sm font-semibold tracking-wide text-zinc-50" aria-label="Sushant Kumar home">
-          {siteConfig.name}
+        <a href="#top" className="group flex flex-col leading-tight" aria-label="Sushant Kumar Java Backend Developer portfolio home">
+          <span className="text-sm font-semibold tracking-wide text-zinc-50">{siteConfig.name}</span>
+          <span className="mt-0.5 text-[11px] font-medium uppercase tracking-[0.12em] text-zinc-500 transition group-hover:text-green-300">Java Backend Developer</span>
         </a>
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Primary navigation">
