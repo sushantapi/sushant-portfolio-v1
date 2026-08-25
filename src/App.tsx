@@ -3,6 +3,7 @@ import { About } from './sections/About'
 import { CaseStudies } from './sections/CaseStudies'
 import { Contact } from './sections/Contact'
 import { Experience } from './sections/Experience'
+import { FeaturedProduct } from './sections/FeaturedProduct'
 import { Footer } from './sections/Footer'
 import { Hero } from './sections/Hero'
 import { Services } from './sections/Services'
@@ -15,6 +16,7 @@ export default function App() {
       <Navbar />
       <main id="main">
         <Hero />
+        <FeaturedProduct />
         <About />
         <Experience />
         <Skills />
