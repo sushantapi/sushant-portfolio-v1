@@ -17,5 +17,4 @@ export const navItems = [
   { label: 'Skills', href: '#skills' },
   { label: 'UMS Platform', href: '#ums-platform' },
   { label: 'Projects', href: '#projects' },
-  { label: 'Services', href: '#services' },
 ]

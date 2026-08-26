@@ -6,7 +6,6 @@ import { Experience } from './sections/Experience'
 import { FeaturedProduct } from './sections/FeaturedProduct'
 import { Footer } from './sections/Footer'
 import { Hero } from './sections/Hero'
-import { Services } from './sections/Services'
 import { Skills } from './sections/Skills'
 
 export default function App() {
@@ -16,12 +15,11 @@ export default function App() {
       <Navbar />
       <main id="main">
         <Hero />
-        <FeaturedProduct />
         <About />
         <Experience />
         <Skills />
+        <FeaturedProduct />
         <CaseStudies />
-        <Services />
         <Contact />
       </main>
       <Footer />
