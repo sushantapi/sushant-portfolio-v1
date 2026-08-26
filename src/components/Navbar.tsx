@@ -15,9 +15,12 @@ export function Navbar() {
   return (
     <header className={`nav-shell sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="section-shell flex h-16 items-center justify-between">
-        <a href="#top" className="group flex flex-col leading-tight" aria-label="Sushant Kumar Java Backend Developer portfolio home">
-          <span className="text-sm font-semibold tracking-wide text-slate-900">{siteConfig.name}</span>
-          <span className="mt-0.5 text-[11px] font-medium uppercase tracking-[0.12em] text-slate-500 transition group-hover:text-blue-600">Java Backend Developer</span>
+        <a href="#top" className="group flex items-center gap-3" aria-label="Sushant Kumar Java Backend Developer portfolio home">
+          <span className="text-2xl font-bold tracking-tight text-blue-600">SK</span>
+          <span className="flex flex-col leading-tight">
+            <span className="text-sm font-semibold tracking-wide text-slate-900">{siteConfig.name}</span>
+            <span className="mt-0.5 text-[11px] text-slate-500">{siteConfig.title}</span>
+          </span>
         </a>
 
         <nav className="hidden items-center gap-7 md:flex" aria-label="Primary navigation">
@@ -26,9 +29,11 @@ export function Navbar() {
               {item.label}
             </a>
           ))}
-          <a href="#contact" className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700">
-            Let's Talk <span className="cta-arrow" aria-hidden="true">→</span>
-          </a>
+          {siteConfig.resumeAvailable && (
+            <a href={siteConfig.resumeUrl} download className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700">
+              Download Resume
+            </a>
+          )}
         </nav>
 
         <button
@@ -55,6 +60,11 @@ export function Navbar() {
                 {item.label}
               </a>
             ))}
+            {siteConfig.resumeAvailable && (
+              <a href={siteConfig.resumeUrl} download onClick={() => setOpen(false)} className="mt-2 rounded-lg bg-blue-600 px-3 py-3 text-sm font-semibold text-white">
+                Download Resume
+              </a>
+            )}
           </div>
         </nav>
       )}
