@@ -4,16 +4,16 @@ import { additionalSkills, skillGroups } from '../data/skills'
 
 export function Skills() {
   return (
-    <section id="skills" className="section-pad border-t border-white/8">
+    <section id="skills" className="section-pad border-t border-slate-200">
       <div className="section-shell">
         <SectionHeading eyebrow="Capabilities" title="Core Backend Skills" description="A focused view of the Java backend technologies I use most, with additional project-specific experience shown separately." />
         <div className="grid gap-4 md:grid-cols-2">
           {skillGroups.map((group, index) => (
             <Reveal key={group.title} delay={index * 80}>
               <article className="interactive-card card h-full p-5 sm:p-6">
-                <h3 className="text-base font-semibold text-zinc-100">{group.title}</h3>
+                <h3 className="text-base font-semibold text-slate-900">{group.title}</h3>
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {group.items.map((item) => <span key={item} className="rounded-md border border-white/10 bg-black/20 px-3 py-1.5 text-sm text-zinc-300">{item}</span>)}
+                  {group.items.map((item) => <span key={item} className="rounded-md border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm text-slate-700">{item}</span>)}
                 </div>
               </article>
             </Reveal>
@@ -22,9 +22,9 @@ export function Skills() {
 
         <Reveal delay={120}>
           <div className="secondary-skill-panel mt-4 rounded-xl border p-5 sm:p-6">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">Additional Backend Experience</h3>
+            <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">Additional Backend Experience</h3>
             <div className="mt-4 flex flex-wrap gap-2">
-              {additionalSkills.map((item) => <span key={item} className="rounded-md border border-white/6 bg-black/15 px-2.5 py-1 text-xs text-zinc-500">{item}</span>)}
+              {additionalSkills.map((item) => <span key={item} className="rounded-md border border-slate-200 bg-white px-2.5 py-1 text-xs text-slate-600">{item}</span>)}
             </div>
           </div>
         </Reveal>
