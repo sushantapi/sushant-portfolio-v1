@@ -16,6 +16,9 @@ export function Contact() {
               <a href={siteConfig.phoneHref} className="rounded-lg border border-white/12 bg-white/4 px-5 py-3 text-sm font-semibold text-zinc-100 transition hover:bg-white/8">Call {siteConfig.phone}</a>
               <a href={siteConfig.linkedin} target="_blank" rel="noreferrer" className="rounded-lg border border-white/12 bg-white/4 px-5 py-3 text-sm font-semibold text-zinc-100 transition hover:bg-white/8">LinkedIn</a>
               <a href={siteConfig.github} target="_blank" rel="noreferrer" className="rounded-lg border border-white/12 bg-white/4 px-5 py-3 text-sm font-semibold text-zinc-100 transition hover:bg-white/8">GitHub</a>
+              {siteConfig.resumeAvailable && (
+                <a href={siteConfig.resumeUrl} download className="rounded-lg border border-white/12 bg-white/4 px-5 py-3 text-sm font-semibold text-zinc-100 transition hover:bg-white/8">Download Resume</a>
+              )}
             </div>
           </div>
         </Reveal>

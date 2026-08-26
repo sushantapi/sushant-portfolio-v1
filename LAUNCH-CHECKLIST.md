@@ -26,21 +26,21 @@ npm install
 
 This should generate `package-lock.json`. Keep that file in source control.
 
-## 3. Add final resume
+## 3. Verify final resume
 
-Copy the final PDF to:
+The final PDF is expected at:
 
 ```text
 E:\sushant-portfolio-v1\public\Sushant-Kumar-Resume.pdf
 ```
 
-Then change this value in `src/data/site.ts`:
+This value should be enabled in `src/data/site.ts`:
 
 ```ts
 resumeAvailable: true,
 ```
 
-Do not enable the button until the PDF exists.
+Do not change the filename without updating `resumeUrl`.
 
 ## 4. Run quality gates
 
@@ -62,7 +62,7 @@ Check:
 - Desktop navigation
 - Mobile menu
 - Hero CTA links
-- All three case-study modals
+- All four project/case-study modals
 - Email link
 - LinkedIn link
 - GitHub link
