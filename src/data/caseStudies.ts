@@ -1,3 +1,5 @@
+import type { DiagramRow } from '../components/ArchitectureDiagram'
+
 export type CaseStudy = {
   id: string
   name: string
@@ -13,6 +15,7 @@ export type CaseStudy = {
   decisions: string[]
   outcome: string
   architecture: string
+  architectureDiagram: DiagramRow[]
   confidentialityNote?: string
 }
 
@@ -37,6 +40,16 @@ export const caseStudies: CaseStudy[] = [
     ],
     outcome: 'Contributed to a secure and maintainable backend foundation covering API development, persistence, scan processing, security, testing, and accessibility-evaluation workflows.',
     architecture: 'Client → Spring Boot APIs → Domain Services → PostgreSQL / RabbitMQ → Scan & Evaluation Workflows',
+    architectureDiagram: [
+      [{ label: 'Client', sublabel: 'Web & API consumers' }],
+      [{ label: 'Spring Boot APIs', sublabel: 'Tenant-scoped REST endpoints' }],
+      [{ label: 'Domain Services', sublabel: 'Org, workspace, scan, crawler, worker' }],
+      [
+        { label: 'PostgreSQL', sublabel: 'Persistence (JPA / Flyway)' },
+        { label: 'RabbitMQ', sublabel: 'Async scan execution + outbox' },
+      ],
+      [{ label: 'Scan & Evaluation Workflows', sublabel: 'Accessibility rule processing' }],
+    ],
     confidentialityNote: 'Professional project case study. Private source code, credentials, internal URLs, customer information, and proprietary implementation details are intentionally excluded.',
   },
   {
@@ -59,6 +72,16 @@ export const caseStudies: CaseStudy[] = [
     ],
     outcome: 'Contributed to enterprise backend services supporting health-insurance customer and digital buying workflows while improving application stability through backend development and production support.',
     architecture: 'Client Journeys → Spring Boot Microservices → REST APIs → JPA / Hibernate → MySQL / Oracle',
+    architectureDiagram: [
+      [{ label: 'Client Journeys', sublabel: 'Policy, claims, digital buying' }],
+      [{ label: 'Spring Boot Microservices', sublabel: 'Business logic & orchestration' }],
+      [{ label: 'REST APIs', sublabel: 'Validation & exception handling' }],
+      [{ label: 'JPA / Hibernate', sublabel: 'ORM persistence layer' }],
+      [
+        { label: 'MySQL', sublabel: 'Application data' },
+        { label: 'Oracle', sublabel: 'Enterprise data' },
+      ],
+    ],
   },
   {
     id: 'olam-ecommerce-modernization',
@@ -80,5 +103,12 @@ export const caseStudies: CaseStudy[] = [
     ],
     outcome: 'Contributed to modernization and maintenance of a B2B e-commerce backend while supporting migration, feature development, testing, defect resolution, and production stability.',
     architecture: 'B2B Application → Java / Spring Boot Services → REST APIs → Hibernate → Oracle',
+    architectureDiagram: [
+      [{ label: 'B2B Application', sublabel: 'Buyer / seller portal' }],
+      [{ label: 'Java / Spring Boot Services', sublabel: 'Modernized from legacy Hybris' }],
+      [{ label: 'REST APIs', sublabel: 'Business modules & logic' }],
+      [{ label: 'Hibernate', sublabel: 'ORM persistence layer' }],
+      [{ label: 'Oracle', sublabel: 'Enterprise database' }],
+    ],
   },
 ]
